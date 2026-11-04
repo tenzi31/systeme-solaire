@@ -1,1 +1,287 @@
 
+/* ==========================================
+   LE SYSTEME SOLAIRE
+   Feuille de style complète du header
+   HTML / CSS uniquement
+========================================== */
+
+/* VARIABLES */
+
+:root {
+    --noir: #050914;
+    --noir-profond: #020610;
+    --bleu-nuit: #111d35;
+    --bleu-navigation: #142442;
+    --bleu: #2563eb;
+    --bleu-clair: #38bdf8;
+    --bleu-lumineux: #0ea5e9;
+    --blanc: #ffffff;
+    --gris-clair: #cbd5e1;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 5%;
+
+    background: var(--noir);
+    color: var(--blanc);
+
+    border-bottom: 1px solid #1b3155;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================
+   IDENTITE DU SITE
+========================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--blanc);
+    text-decoration: none;
+
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+.brand-mark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--bleu-clair),
+        var(--bleu)
+    );
+
+    color: var(--blanc);
+    font-size: 1.5rem;
+
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+}
+
+/* ==========================================
+   NAVIGATION PRINCIPALE
+========================================== */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    padding: 8px;
+
+    background: var(--bleu-nuit);
+
+    border: 1px solid #203b63;
+    border-radius: 30px;
+}
+
+.nav-links a {
+    display: inline-block;
+
+    padding: 10px 16px;
+
+    color: var(--gris-clair);
+    text-decoration: none;
+
+    font-size: 0.92rem;
+    font-weight: 500;
+
+    border-radius: 22px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* SURVOL */
+
+.nav-links a:hover {
+    color: var(--blanc);
+    background: #1e40af;
+
+    transform: translateY(-2px);
+}
+
+/* LIEN ACTIF */
+
+.nav-links a.active {
+    color: var(--blanc);
+    background: var(--bleu);
+
+    font-weight: 700;
+}
+
+/* FOCUS CLAVIER */
+
+.nav-links a:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--bleu-clair);
+    outline-offset: 4px;
+}
+
+/* ==========================================
+   BOUTON MENU MOBILE
+========================================== */
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+
+    padding: 9px 14px;
+
+    color: var(--bleu-clair);
+    background: var(--bleu-nuit);
+
+    border: 1px solid var(--bleu);
+    border-radius: 10px;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--blanc);
+    background: var(--bleu);
+}
+
+/* ==========================================
+   RESPONSIVE TABLETTES ET MOBILES
+========================================== */
+
+@media screen and (max-width: 850px) {
+
+    .site-header {
+        flex-wrap: wrap;
+        padding: 14px 5%;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+    }
+
+    .menu-checkbox {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 5px;
+
+        order: 3;
+
+        width: 100%;
+        margin-top: 15px;
+        padding: 12px;
+
+        background: var(--bleu-nuit);
+
+        border: 1px solid #203b63;
+        border-radius: 14px;
+    }
+
+    /* OUVERTURE DU MENU SANS JAVASCRIPT */
+
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+
+        padding: 12px 16px;
+
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .nav-links a:hover {
+        transform: none;
+    }
+}
+
+/* PETITS ECRANS */
+
+@media screen and (max-width: 480px) {
+
+    .site-header {
+        padding: 12px 4%;
+    }
+
+    .brand {
+        font-size: 1rem;
+        gap: 8px;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        padding: 7px 11px;
+        font-size: 1.3rem;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITE
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
