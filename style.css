@@ -1,11 +1,17 @@
-<style>
-    :root {
-      --bg: #080910;
-      --text: #fff;
-      --muted: #c4c6d0;
-      --accent: #f5b94c;
-      --panel: rgba(255,255,255,.105);
-      --line: rgba(255,255,255,.15);
-      --nav-height: 76px;
-      --max-width: 1200px;
-    }
+:root {
+    --background: #030308;
+    --background-light: #080817;
+
+    --text-color: #f5f5ff;
+    --text-muted: #a5a5bc;
+
+    --accent: #a78bfa;
+    --accent-blue: #60a5fa;
+
+    --glow-purple: rgba(139, 92, 246, 0.45);
+    --glow-blue: rgba(59, 130, 246, 0.35);
+
+    --border-color: rgba(255, 255, 255, 0.10);
+
+    --section-padding: 120px;
+}
