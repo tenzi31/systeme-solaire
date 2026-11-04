@@ -1,1 +1,11 @@
-
+<style>
+    :root {
+      --bg: #080910;
+      --text: #fff;
+      --muted: #c4c6d0;
+      --accent: #f5b94c;
+      --panel: rgba(255,255,255,.105);
+      --line: rgba(255,255,255,.15);
+      --nav-height: 76px;
+      --max-width: 1200px;
+    }
