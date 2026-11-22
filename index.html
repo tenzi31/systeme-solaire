@@ -10,43 +10,34 @@
   </head>
   
   <body>
-    
-    <!-- header section starts -->
+    <!-- HEADER SECTION -->
     <header class="site-header">
       <a class="brand" href="#accueil" aria-label="Le Système solaire — accueil">
         <span class="brand-mark" aria-hidden="true">✳</span>
         <span>Le Système solaire</span>
       </a>
+      <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a> | <a href="#soleil">Le Soleil</a> | <a href="#planetes">Les planètes</a> | <a href="#pluton">Pluton</a> | <a href="glossaire.html">Glossaire</a> | <a href="doc.html">Documentation</a>
+      </nav>
+    </header>
 
-      <button class="menu-toggle" id="menuToggle"
-        aria-label="Ouvrir le menu" aria-expanded="false"
-        aria-controls="navLinks">
-        ☰
-      </button>
-
-        <a href="#accueil">Accueil</a> | <a href="#soleil">Le Soleil</a> | <a href="#planetes">Les planètes</a> | <a href="#pluto">Pluto</a> | <a href="#glossaire">Glossaire</a> | <a href="#documentation">Documentation</a>
-  </header>
-    
-    <main>
-      <!-- ACCUEIL -->
-      <section class="section hero" id="accueil">
+  <main>
+    <!-- ACCUEIL -->
+    <section class="section hero" id="accueil">
       <div class="stars"></div>
       <div class="hero-content">
         <div class="eyebrow">UN VOYAGE DANS L'ESPACE</div>
-        <h1><span>Le système</span><span>solaire</span></h1>
+        <h1>Le Système solaire</h1>
         <p class="hero-subtitle">Explorez les merveilles de notre Système solaire.</p>
-        <div class="button-row">
-          <a href="#introduction" class="btn btn-primary">Commencer l'exploration</a>
-          <a href="#planetes" class="btn">Découvrir les planètes</a>
+        <a href="#introduction" class="btn btn-primary">Commencer l'exploration</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-      <!-- INTRO -->
-      <section class="section intro" id="introduction">
+    <!-- INTRO -->
+    <section class="section intro" id="introduction">
       <div class="stars"></div>
       <div class="section-inner reveal">
-        <div class="section-label">Notre voisinage cosmique</div>
+        <div class="eyebrow">NOTRE VOISINGAE COSMIQUE</div>
         <h2>Un système organisé autour du Soleil</h2>
         <div class="intro-grid">
           <div class="intro-copy">
@@ -55,37 +46,65 @@
               Au centre du système se trouve le Soleil, une étoile autour de laquelle gravitent huit planètes, ainsi que de nombreux autres objets célestes.
             </p>
           </div>
-          
           <div class="intro-copy">
             <p>
               Le Système solaire est très vaste. Les distances entre les différents objets sont tellement importantes que les astronomes utilisent des unités particulières pour les mesurer.
               L’<b>unité astronomique (UA)</b> correspond à la distance moyenne entre la Terre et le Soleil, soit environ <b>149,6 millions de kilomètres.</b>
             </p>
-            
             <a href="#soleil" class="btn">Découvrir notre étoile →</a>
           </div>
         </div>
       </div>
     </section>
 
-      <!-- LE SOLEIL -->
-      <section class="section sun-section" id="soleil">
-        <div class="stars"></div>
-        <div class="section-inner sun-content reveal">
-          <div class="section-label">Au cœur de notre système</div>
-          <h2>Le Soleil</h2>
-          <p class="section-subtitle">Une étoile au centre du Système solaire</p>
+    <!-- VIDÉO -->
+    <section class="section video-section" style="background-color: white;">
+      <p class="section-subtitle">Le Système solaire expliqué simplement en 4 minutes</p>
 
-          <div class="sun-grid">
-            <div>
-              <p>
+      <div role="region" aria-labelledby="video-title">
+        <h3 id="video-title" class="sr-only">Documentaire vidéo</h3>
+        <div style="text-align: center;">
+
+    <!-- LIEN DE LA VIDÉO-->
+      <figure class="video-wrapper-fixed">
+        <iframe
+          width="560" 
+          height="315"
+          src="https://www.youtube.com/watch?v=NIyjtgvRcnQ"
+          title="Tout comprendre sur : Le Système solaire"
+          aria-label="Vidéo documentaire sur le Système solaire"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          ></iframe>
+      </figure>
+
+    <!-- Description cachée pour les lecteurs d'écran -->
+      <p id="video-desc" class="sr-only"> Documentaire éducatif de 4 minutes présentant notre Système solaire. Contenu : les planètes, la Voie Lactée, les lunes et ses astéroïdes. Sous-titres disponibles en français.</p>
+
+    <!-- INDICATION VISUELLE -->
+      <p style="text-align: center; color: #666; margin-top: 1rem; font-size: 0.9rem;">🎬 Documentaire sous-titré</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- LE SOLEIL -->
+    <section class="section soleil" id="soleil">
+      <div class="stars"></div>
+      <div class="section-inner sun-content reveal">
+        <div class="eyebrow">AU COEUR DE NOTRE SYTÈME</div>
+        <h2>Le Soleil</h2>
+        <p class="section-subtitle">Une étoile au centre du Système solaire</p>
+
+        <div class="sun-grid">
+          <div>
+            <p>
               Le Soleil est l’étoile du Système solaire. Il contient à lui seul la très grande majorité de la masse du système, ce qui lui permet d’exercer une force gravitationnelle considérable sur les objets qui l’entourent.
-              </p>
-              <p>
+            </p>
+            <p>
               Son diamètre est d’environ <b>1,4 million de kilomètres</b>, soit près de 109 fois celui de la Terre.
-              </p>
+            </p>
           </div>
-
           <div>
             <p>
               Le Soleil est principalement composé d’hydrogène et d’hélium. Dans son cœur, la température et la pression sont suffisamment importantes pour permettre la fusion nucléaire : des noyaux
@@ -124,8 +143,226 @@
         </div>
       </div>
     </section>
-</main>
 
+    <!-- LES PLANÈTES -->
+    <section class="section planets" id="planetes">
+      <div class="stars"></div>
+      <div class="section-inner">
+        <div class="section-heading reveal">
+          <div class="eyebrow">HUIT MONDES À DÉCOUVRIR</div>
+          <h2>Les planètes</h2>
+          <p>
+            Du monde brûlant le plus proche du Soleil aux géantes glacées des confins du système, chaque planète possède sa propre histoire. Sélectionnez une planète pour en apprendre davantage.
+          </p>
+        </div>
+
+        <button class="category-btn active" data category="rocheuses">Rocheuses</button>
+        <button class="category-btn active" data category="géantes">Géantes</button>
+
+    <!-- PLANÈTES ROCHEUSES -->
+        <div class="planet-grid">
+          <article class="planet-card">
+            <div class="planet-image mercury" role="img" aria-label="Mercure"></div>
+            <div class="card-content">
+              <p class="tag">01 / LE MESSAGER DES DIEUX</p>
+              <h3>Mercure</h3>
+              <p>Mercure est la planète la plus proche du Soleil et la plus petite des huit planètes.</p>
+              <p>Elle possède une surface rocheuse couverte de nombreux cratères. Comme son atmosphère est extrêmement ténue, elle conserve difficilement la chaleur.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>58 millions de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>88 jours terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                <p>Les températures sur Mercure peuvent donc être très différentes entre le jour et la nuit.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">02 / L'ÉTOILE DU BERGER</p>
+              <h3>Vénus</h3>
+              <p>La deuxième planète à partir du Soleil, souvent appelé la « sœur » de la Terre pour sa taille.</p>
+              <p>Pourtant, ses conditions sont très différentes. Son épaisse atmosphère de dioxyde de carbone provoque un effet de serre puissant.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>108 millions de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>224,7 jours terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>Vénus est aussi la planète la plus chaude du Système solaire, avec une température de surface d’environ 465 °C.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">03 / LA PLANÈTE BLEUE</p>
+              <h3>Terre</h3>
+              <p>La Terre est la troisième planète à partir du Soleil et à notre connaissance, le seul endroit de l’Univers où la vie existe.</p>
+              <p>Elle possède de l’eau liquide en grande quantité à sa surface ainsi qu’une atmosphère principalement composée d’azote et d’oxygène.</p> 
+              <p>La Terre possède également un satellite naturel : la Lune.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>150 millions de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>365,25 jours terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>Son champ magnétique et son atmosphère contribuent à protéger la surface contre une partie des rayonnements et des particules provenant du Soleil.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">04 / LA PLANÈTE ROUGE</p>
+              <h3>Mars</h3>
+              <p>Mars est la quatrième planète à partir du Soleil. Sa couleur rouge provient notamment de l’oxydation du fer présent dans les roches de sa surface.</p>
+              <p>Mars possède une atmosphère très fine et des températures généralement beaucoup plus basses que celles de la Terre.</p> 
+              <p>La planète présente également des traces indiquant que de l’eau liquide a probablement existé à sa surface dans le passé.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>227,9 millions de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>1,88 année terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>Mars est aujourd’hui l’une des principales cibles de l’exploration spatiale. Des robots ont notamment étudié sa surface et recherché des indices sur son passé.</p>
+              </details>
+            </div>
+          </article>
+         
+    <!-- LES PLANÈTES GÉANTES-->
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">05 / LA GÉANTE GAZEUSE</p>
+              <h3>Jupiter</h3>
+              <p>Jupiter est la plus grande planète du Système solaire.</p>
+              <p>Il s’agit d’une géante gazeuse principalement composée d’hydrogène et d’hélium. Elle possède une atmosphère très dynamique avec de nombreuses bandes nuageuses.</p> 
+              <p>Son phénomène le plus célèbre est la <b>Grande Tache rouge</b>, une gigantesque tempête observée depuis plusieurs siècles.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>778 millions de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>11,86 années terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>Jupiter possède également de nombreux satellites, dont <b>Europe, Io, Ganymède et Callisto.</b></p>
+              </details>
+            </div>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">06 / LE SEIGNEUR DES ANNEAUX</p>
+              <h3>Saturne</h3>
+              <p>Saturne est facilement reconnaissable grâce à son impressionnant système d’anneaux.</p>
+              <p>Comme Jupiter, Saturne est une géante gazeuse principalement composée d’hydrogène et d’hélium.</p> 
+              <p>Ses anneaux sont constitués de milliards de particules de glace et de roche de tailles différentes.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>1,4 millairds de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>29,5 années terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>Saturne possède également de nombreux satellites. Parmi eux, <b>Titan</b> est particulièrement intéressant: il possède une atmosphère épaisse et des lacs et mers constitués d’hydrocarbures liquides.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">07 / LA PLANÈTE COUCHÉE</p>
+              <h3>Uranus</h3>
+              <p>Uranus est une géante de glaces. Son atmosphère contient principalement de l’hydrogène, de l’hélium et du méthane.</p>
+              <p>La planète possède une caractéristique surprenante : son axe de rotation est fortement incliné. Uranus semble donc tourner presque « couchée » sur son orbite.</p> 
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>2,87 milliards de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>84 années terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>Le méthane absorbe certaines longueurs d’onde de la lumière et donne à Uranus sa couleur bleu-vert.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="planet-card">
+            <div class="planet-image venus" role="img" aria-label="Vénus"></div>
+            <div class="card-content">
+              <p class="tag">08 / LA GÉANTE VENTEUSE</p>
+              <h3>Neptune</h3>
+              <p>Neptune est la planète la plus éloignée du Soleil parmi les huit planètes.</p>
+              <p>Comme Uranus, elle est classée parmi les géantes de glaces.</p> 
+              <p>Neptune est connue pour ses vents extrêmement rapides, parmi les plus rapides observés sur une planète du Système solaire.</p>
+              <dl>
+                <dt>Distance moyenne au Soleil</dt>
+                <dd>4,5 milliards de km</dd>
+                <dt>Durée d’une année</dt>
+                <dd>164,8 années terrestres</dd>
+              </dl>
+              <details>
+                <summary>Voir plus</summary>
+                  <p>En raison de sa grande distance, elle reçoit beaucoup moins d’énergie du Soleil que la Terre.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+      </section>
+
+    <!-- PLUTON -->
+      <section class="section pluto" id="pluton">
+        <p class="eyebrow">LA PLANÈTE NAINE</p>
+        <h2>Pluton</h2>
+        <p>Pluton est une planète naine et non l’une des huit planètes.</p>
+        <div class="info-card">
+          <div class="pluto-picture" role="img" aria-label="Illustration stylisée de Pluto">
+        </div>
+
+        <p class="image-legend">
+          <small>© Unsplash - Licence libre</small>
+        </p>
+
+        <h3>Située aux confins du Système solaire</h3>
+        <p>Découverte en 1930, Pluton a perdu son titre de neuvième planète en 2006.</p>
+        <p>L'Union astronomique internationale l'a reclassée en planète naine car elle n'a pas « nettoyé » son orbite, qu'elle partage avec des milliers d'autres corps glacés dans la ceinture de Kuiper.</p>
+        <p>Elle est célèbre pour sa gigantesque plaine de glace brillante en forme de cœur, observée par la sonde <a href="https://science.nasa.gov/mission/new-horizons/"><strong>New Horizons</strong></a> en 2015.</p>
+        <dl>
+          <dt>Distance moyenne au Soleil</dt>
+          <dd>Environ 5,9 milliards de km</dd>
+          <dt>Durée d’une année</dt>
+          <dd>Environ 248 années terrestres</dd>
+        </dl>
+        <details>
+          <summary>Voir plus</summary>
+          <p>Sa surface contient principalement de l'azote, du monoxyde de carbone et du méthane gelés, ce qui lui donne une teinte beige cuivrée.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <a class="brand" href="#accueil">LE SYSTÈME SOLAIRE</a>
+    </footer>
   </body>
 </html>
- 
