@@ -192,8 +192,7 @@ main {
   font-size: 1.1rem;
 }
 
-/* Les éléments .stars du HTML ajoutent un voile étoilé décoratif.
-   Ils restent derrière le texte et ne bloquent pas les clics. */
+<!-- ÉTOILES -->
 .stars {
   position: absolute;
   inset: 0;
@@ -238,7 +237,6 @@ button:hover,
   box-shadow: 0 8px 24px rgba(255, 212, 59, .2);
 }
 
-/* Compatibilité avec le HTML « class="btn btn primary" » */
 .btn.primary {
   background: var(--yellow);
   color: #080808;
@@ -303,7 +301,7 @@ button:hover,
 
 .video-section .section-subtitle {
   margin-bottom: 1.5rem;
-  color: #444;
+  color: var(--white);
 }
 
 .video-wrapper-fixed {
