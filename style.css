@@ -744,3 +744,68 @@ details p {
         transition-duration: .01ms !important;
     }
 }
+
+/* Ajustements pour le site du système solaire */
+.site-header { min-height: 76px; }
+.brand-mark { display: inline-block; margin-right: 9px; border: 0; background: none; }
+.hero { padding-top: 28px; }
+.hero::before {
+    content: ""; position: absolute; inset: 0; z-index: -2; opacity: .25;
+    background: linear-gradient(90deg, #050609 0%, #050609aa 55%, transparent),
+                url("images/soleil-header.jpg") center/cover no-repeat;
+}
+.intro { padding-top: 125px; }
+.sun-picture {
+    background: linear-gradient(#05060944,#05060944), url("images/soleil.jpg") center/cover no-repeat;
+}
+.site-footer .footer-title { color: var(--gold); text-align: center; letter-spacing: .12em; font-weight: 800; }
+.planet-grid { align-items: stretch; }
+.planet-card { min-height: 570px; display: flex; flex-direction: column; }
+.card-content { display: flex; flex: 1; flex-direction: column; }
+.card-content details { margin-top: auto; padding-top: 10px; }
+.planet-image { flex: 0 0 190px; }
+.planet-image.has-photo::before, .planet-image.has-photo::after { display: none; }
+.planet-image.has-photo { background-position: center; background-size: cover; }
+.planet-image.mercury-photo { background-image: url("images/mercury.jpg"); }
+.planet-image.venus-photo { background-image: url("images/venus.jpg"); }
+.planet-image.earth-photo { background-image: url("images/terre.jpg"); }
+.planet-image.mars-photo { background-image: url("images/mars.jpg"); }
+.planet-image.jupiter-photo { background-image: url("images/jupiter.jpg"); }
+.planet-image.saturn-photo { background-image: url("images/saturne.jpg"); }
+.planet-image.uranus-photo { background-image: url("images/uranus.jpg"); }
+.planet-image.neptune-photo { background-image: url("images/neptune.jpg"); }
+.planet-switch { display:flex; flex-wrap:wrap; gap:12px; margin:28px 0 18px; }
+.planet-switch input { position:absolute; opacity:0; pointer-events:none; }
+.planet-switch label {
+    display:inline-flex; align-items:center; justify-content:center;
+    padding:11px 22px; border-radius:14px; border:1px solid var(--gold);
+    background:var(--gold); color:#17130b; font-weight:800; cursor:pointer;
+    transition:transform .2s, box-shadow .2s, background .2s;
+}
+.planet-switch label:hover { transform:translateY(-2px); box-shadow:0 8px 24px #f5c66b25; }
+#filter-rocky:checked ~ .planet-switch label[for="filter-rocky"],
+#filter-gas:checked ~ .planet-switch label[for="filter-gas"] {
+    background:#fff0c9; box-shadow:0 0 0 3px #f5c66b33;
+}
+#filter-gas:checked ~ .rocky-grid { display:none; }
+#filter-rocky:checked ~ .gas-grid { display:none; }
+.glossary-list { max-width:900px; margin:30px auto 0; }
+.glossary-list details {
+    margin:0 0 13px; padding:19px 24px; border:1px solid var(--line);
+    border-radius:15px; background:#ffffff08;
+}
+.glossary-list summary { color:var(--gold); }
+.glossary-list details p { margin:12px 0 0; padding:0; line-height:1.8; }
+.page-heading { font-size:clamp(2rem,4vw,3rem); margin-bottom:14px; }
+.documentation-content { width:min(900px,90%); margin:0 auto; padding:70px 0; text-align:left; }
+.documentation-content h1, .documentation-content h2 { font-size:clamp(1.8rem,3.5vw,2.5rem); }
+.documentation-content h2 { margin-top:44px; }
+.documentation-content p, .documentation-content li { color:var(--muted); }
+.documentation-content .source-card { margin:18px 0; }
+.video-frame { width:100%; aspect-ratio:16/9; border:0; border-radius:20px; background:#08090d; }
+.video-section { padding-top:20px; }
+@media (max-width:650px) {
+    .planet-card { min-height:0; }
+    .planet-switch label { flex:1; }
+    .intro { padding-top:90px; }
+}
